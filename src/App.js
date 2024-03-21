@@ -5,7 +5,7 @@ import CustomNavbar from './components/CustomNavbar';
 
 function App() {
   return (
-    <>
+    <> 
        <CustomNavbar/>   
     </>
    

@@ -1,14 +1,14 @@
 import React from "react"; 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom/cjs/react-router-dom";
-import { Navbar, Nav } from 'react-bootstrap';
+
+import { Navbar, Nav } from 'react-bootstrap'; 
+
 import '../css/CustomNavbar.css' 
-import About from "./About";
-import Services from "./Services";
-import Contact from "./Contact";
-import Galeries from "./Galeries"; 
-import Home from "./Home"; 
+import { BrowserRouter as Router, Link } from "react-router-dom/cjs/react-router-dom";
+
+import AnimatedRoutes from "./AnimatedRoutes";  
 
 const CustomNavbar = () => {
+  
     return(
         <> 
         <Router> 
@@ -25,25 +25,9 @@ const CustomNavbar = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar> 
-            <div>
-                <Switch>
-                    <Route path="/about">
-                      <About />  
-                    </Route>
-                    <Route path="/services">
-                      <Services />   
-                    </Route>
-                    <Route path="/galeries">
-                      <Galeries />    
-                    </Route>
-                    <Route path="/contact">
-                      <Contact />   
-                    </Route>
-                    <Route path="/">
-                      <Home />  
-                    </Route>
-                </Switch>
-            </div>
+            
+                <AnimatedRoutes /> 
+            
         </Router>
                  
         </>
